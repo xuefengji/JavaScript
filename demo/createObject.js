@@ -6,11 +6,18 @@
 // console.log(o.name);
 // console.log(o.age);
 
-// 方式二：使用new Object创建
-o = new Object()
+// 方式二：使用new Object()创建
+// o = new Object()
+// console.log(o instanceof Object)
+// o.name = 'Tom'
+// o.sysname = function(){
+//     console.log(this.name)
+// }
+// o.sysname()
+
+
+//方式三：使用字面量方式创建
+o = {name:'Tom'}
 console.log(o instanceof Object)
-o.name = 'Tom'
-o.sysname = function(){
-    console.log(this.name)
-}
-o.sysname()
+o.age = 20
+console.log(o.age)

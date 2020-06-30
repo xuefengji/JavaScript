@@ -31,8 +31,14 @@ o.sysname()   //Tom
 
 #### 方式三：使用字面量方式创建
 示例：
-
-
+```
+//方式三：使用字面量方式创建
+o = {name:'Tom'}
+console.log(o instanceof Object)    //true
+o.age = 20
+console.log(o.age)        //20
+```
+此方式类似于方式二
 
 #### 方式四：使用工厂模式创建
 
