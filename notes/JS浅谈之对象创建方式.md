@@ -17,7 +17,14 @@ console.log(o.age);               //20
 #### 方式二：使用new Object()创建
 示例：
 ```
-
+// 方式二：使用new Object创建
+o = new Object()
+console.log(o instanceof Object)   //true
+o.name = 'Tom'
+o.sysname = function(){
+    console.log(this.name)
+}
+o.sysname()   //Tom
 
 
 
