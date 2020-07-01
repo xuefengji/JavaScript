@@ -51,11 +51,17 @@ function Person(name){
     this.name = name
 }
 o = new Person('Tom');
-console.log(o instanceof Object)
+console.log(o instanceof Object)    //true
 o.sysName = function (){
+    console.log(this.name)    
+}
+o.sysName()   //Tom
+o1 =  new Person('Bob');
+console.log(o1 instanceof Object)   //true
+o1.sysName = function (){
     console.log(this.name)
 }
-o.sysName()
+o1.sysName()     //Bob
 ```
 
 #### 方式六：使用原型方式创建

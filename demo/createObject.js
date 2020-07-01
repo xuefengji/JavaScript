@@ -39,6 +39,14 @@ o.sysName = function (){
     console.log(this.name)
 }
 o.sysName()
+o1 =  new Person('Bob');
+console.log(o1 instanceof Object)
+o1.sysName = function (){
+    console.log(this.name)
+}
+o1.sysName()
+
+
 
 // 方式六：使用原型方式创建
 
