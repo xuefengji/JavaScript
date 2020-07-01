@@ -44,7 +44,19 @@ console.log(o.age)        //20
 
 
 #### 方式五：使用构造函数创建
-
+示例：
+```
+//方式五：使用构造函数创建
+function Person(name){
+    this.name = name
+}
+o = new Person('Tom');
+console.log(o instanceof Object)
+o.sysName = function (){
+    console.log(this.name)
+}
+o.sysName()
+```
 
 #### 方式六：使用原型方式创建
 
