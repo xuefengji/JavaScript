@@ -65,6 +65,40 @@ o1.sysName()     //Bob
 ```
 
 #### 方式六：使用原型方式创建
+```
+function Person(){
+    
+}
+Person.prototype.name = 'Tom'
+Person.prototype.sysName = function(){
+    console.log(this.name)
+}
 
+o = new Person()
+o1 = new Person()
+
+o.sysName()     //Tom
+o1.sysName()   //Tom
+```
+使用原型创建对象时，多个对象得属性可以共享
+缺点：如果共享的数据类型是引用性类型，则一个对象对此数据进行改变时，其他对象访问此数据时，将是被改变过的数据,如下：
+```
+function Person(){
+    
+}
+Person.prototype.name = 'Tom'
+Person.prototype.arry = [1,2,3]
+Person.prototype.sysName = function(){
+    console.log(this.name)
+}
+
+o = new Person()
+o1 = new Person()
+console.log(o.arry)      //[ 1, 2, 3 ]
+console.log(o1.arry)     //[ 1, 2, 3 ]
+o.arry.push(4)
+console.log(o.arry)      //[ 1, 2, 3, 4 ]
+console.log(o1.arry)     //[ 1, 2, 3, 4 ]
+```
 
 #### 方式七：使用原型+构造函数方式创建

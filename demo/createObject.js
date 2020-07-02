@@ -30,25 +30,47 @@ function createObject(){
 
 
 //方式五：使用构造函数创建
-function Person(name){
-    this.name = name
-}
-o = new Person('Tom');
-console.log(o instanceof Object)
-o.sysName = function (){
-    console.log(this.name)
-}
-o.sysName()
-o1 =  new Person('Bob');
-console.log(o1 instanceof Object)
-o1.sysName = function (){
-    console.log(this.name)
-}
-o1.sysName()
+// function Person(name){
+//     this.name = name
+// }
+// o = new Person('Tom');
+// console.log(o instanceof Object)
+// o.sysName = function (){
+//     console.log(this.name)
+// }
+// o.sysName()
+// o1 =  new Person('Bob');
+// console.log(o1 instanceof Object)
+// o1.sysName = function (){
+//     console.log(this.name)
+// }
+// o1.sysName()
 
 
 
 // 方式六：使用原型方式创建
+function Person(){
+    
+}
+Person.prototype.name = 'Tom'
+Person.prototype.arry = [1,2,3]
+Person.prototype.sysName = function(){
+    console.log(this.name)
+}
+
+o = new Person()
+o1 = new Person()
+
+// o.sysName()
+// o1.sysName()
+console.log(o.arry)
+console.log(o1.arry)
+o.arry.push(4)
+console.log(o.arry)
+console.log(o1.arry)
+
+
+
 
 
 // 方式七：使用原型+构造函数方式创建
