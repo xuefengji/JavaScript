@@ -102,3 +102,22 @@ console.log(o1.arry)     //[ 1, 2, 3, 4 ]
 ```
 
 #### 方式七：使用原型+构造函数方式创建
+```
+function Person(arry){
+     this.arry1 = arry
+}
+Person.prototype.name = 'Tom'
+Person.prototype.sysName = function(){
+    console.log(this.name)
+}
+
+o = new Person([1,2,3])
+o1 = new Person([1,2,3])
+o.sysName()
+o1.sysName()
+console.log(o.arry1)    //[1,2,3]
+console.log(o1.arry1)   //[1,2,3]
+o.arry1.push(4)
+console.log(o.arry1)    //[1,2,3,4]
+console.log(o1.arry1)   //[1,2,3]
+```
