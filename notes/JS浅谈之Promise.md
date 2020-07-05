@@ -1,3 +1,5 @@
+#### Promise
+
 Promise状态：
 初始化状态：pending
 异步操作成功状态：由 pending --》resolve状态
@@ -13,4 +15,13 @@ let p = new Promise(function(resolve, reject){
     }, 2000);
 });
 ```
-可以发现使用 node 进行执行时，会过 2 秒中打印出来‘执行完成Promise’
+可以发现使用 node 进行执行时，会过 2 秒中打印出来‘执行完成Promise'
+
+
+
+#### async/await
+
+await : 将一个Promise 对象转换成普通的对象
+
+async：使用了 await 的必须要在包含的函数前添加 async ，否则会报错
+
