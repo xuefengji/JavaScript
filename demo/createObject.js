@@ -23,11 +23,24 @@ o.age = 20
 console.log(o.age)
 
 
-//使用工厂模式创建
-function createObject(){
 
-}
+// 使用工厂模式创建对象
+        // 定义一个工厂方法
+        function createObject(name){
+            var o = new Object();
+            o.name = name;
+            o.sayName = function(){
+                alert(this.name);
+            };
+            return o;
+        }
 
+        var o1 = createObject('zhang');
+        var o2 = createObject('li');
+
+        //缺点：调用的还是不同的方法
+        //优点：解决了前面的代码重复的问题
+        console.log(o1.sayName===o2.sayName);//false
 
 //方式五：使用构造函数创建
 function Person(name){
