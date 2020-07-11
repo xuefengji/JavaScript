@@ -42,7 +42,6 @@ console.log(o.age)        //20
 
 #### 方式四：使用工厂模式创建
 // 使用工厂模式创建对象
-        // 定义一个工厂方法
 ```
         function createObject(name){
             var o = new Object();
